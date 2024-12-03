@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/clean-energy-app",
+            "outputPath": "dist/clean-energy-app/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -23,8 +23,15 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "src/assets",
+                "output": "/assets"
+            },
+              {
+                "glob": "**/*",
+                "input": "public",
+                 "output": "/"
+              },
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.css"

@@ -1,0 +1,142 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.rotating-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.ask-ai-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.styled-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.styled-button:hover {
+  background-color: #0056b3;
+}
+
+.summary-text {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.technical-details {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.ai-response {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e9f5ff;
+  border-radius: 5px;
+  border: 1px solid #007BFF;
+}
+
+h2 {
+  color: #007acc;
+  text-align: center;
+}
+
+h3 {
+  color: #0056b3;
+}
+
+.reference {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* ADA/WCAG: High Contrast Mode Styles for Improved Accessibility */
+.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+.high-contrast .styled-button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #fff;
+}
+
+.high-contrast a {
+  color: #00f;
+}
+
+.high-contrast canvas {
+  border-color: #fff;
+}

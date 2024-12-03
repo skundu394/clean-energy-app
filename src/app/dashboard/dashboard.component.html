@@ -1,0 +1,87 @@
+<div class="container">
+  <h2>Dashboard</h2>
+  <div class="welcome-message">
+    <p>{{ content }}</p>
+  </div>
+  <!-- <button (click)="logout()">Logout</button> -->
+
+<!-- Navigation Links
+  <nav class="nav-links">
+  <button (click)="logout()">Logout</button>
+  <button routerLink="/summary">Go to Summary Page</button>
+  <button routerLink="/reports">Go to Reports Page</button>
+  </nav> -->
+
+  <!-- Button Container for Logout, Summary, and Reports -->
+  <div class="button-container">
+    <button class="styled-button" (click)="logout()">Logout</button>
+    <button class="styled-button" routerLink="/summary">Go to Summary Page</button>
+    <button class="styled-button" routerLink="/reports">Go to Reports Page</button>
+    <!-- High Contrast Toggle Button -->
+     <!-- ADA/WCAG: High Contrast Mode Toggle for Accessibility -->
+    <button class="styled-button" (click)="toggleHighContrast()" aria-label="Toggle High Contrast Mode">
+      Toggle High Contrast
+    </button>
+
+</div>
+
+  <!-- Rotating Image Display -->
+  <div class="image-container">
+    <img [src]="currentImage" alt="Country Image" class="rotating-image">
+  </div>
+
+  <!-- <img [src]="currentImage" alt="Country Image" class="rotating-image" (error)="currentImage='assets/images/Clean Renewable-Energy-Default.jpg'"> -->
+
+  <div class="dashboard-container">
+    <h2>Nordic Clean Energy Innovations</h2>
+
+    <!-- 200-word summary paragraph -->
+    <div class="summary-text">
+      <p>
+        The Nordic region has been at the forefront of clean energy innovations, focusing on integrating renewable energy sources like wind, solar, and hydroelectric power. Recent advancements have included a shift towards a more flexible power market model, aiding the integration of renewables. This change enhances energy efficiency and supports the reduction of carbon emissions, aligning with the region’s ambitious climate goals. Key projects in Sweden and Norway are utilizing cutting-edge technologies, such as floating wind farms and improved energy storage solutions. Finland and Denmark have also made significant progress in leveraging AI to optimize energy distribution, reducing overall energy waste. Iceland continues to lead in geothermal energy, further expanding its capabilities to export clean energy to neighboring countries.
+      </p>
+      <p class="reference">
+        Source: <a href="https://www.reuters.com/sustainability/climate-energy/nordic-region-switches-power-market-model-aid-renewables-integration-2024-10-29/" target="_blank">Nordic Clean Energy News</a>
+      </p>
+    </div>
+
+    <!-- Technical aspects paragraph -->
+    <div class="technical-details">
+      <h3>Technical Aspects of the Project</h3>
+      <p>
+          This Clean Energy Dashboard application is built using Angular, featuring a modular and component-based architecture. The frontend is developed with Angular's standalone components, ensuring efficient state management and UI updates. The data visualization is implemented using Chart.js, a popular JavaScript library for creating responsive and interactive charts. Chart.js provides flexibility and a wide variety of chart types, making it ideal for representing complex data sets in an accessible format.
+      </p>
+      <p>
+          The backend server is powered by Node.js with Express, serving RESTful APIs for data retrieval. JWT authentication is integrated for secure access control, ensuring that users have the appropriate permissions to view the content. The data for the charts is fetched asynchronously using HTTP GET requests, leveraging Angular's HttpClient service for smooth and efficient data handling. The application follows best practices for accessibility, incorporating WCAG guidelines to ensure an inclusive user experience across different devices and screen sizes.
+      </p>
+  </div>
+
+  <!-- ADA/WCAG: Accessible Ask AI Form for Clean Energy Questions -->
+  <div class="ask-ai-container">
+    <h3>Ask AI About Clean Energy</h3>
+    <form (ngSubmit)="onSubmit()" aria-label="Ask AI Form">
+        <label for="question" class="visually-hidden">Ask your question</label>
+        <textarea
+            id="question"
+            name="question"
+            placeholder="Type your question about clean energy here..."
+            [(ngModel)]="question"
+            required
+            aria-required="true"
+            aria-label="Question Text Area"
+            rows="4"
+        ></textarea>
+
+        <button type="submit" class="styled-button" aria-label="Submit your question">
+            Ask AI
+        </button>
+    </form>
+
+    <div *ngIf="response" class="ai-response" aria-live="polite">
+        <h4>AI Response:</h4>
+        <p>{{ response }}</p>
+    </div>
+</div>
+  </div>
+
+</div>

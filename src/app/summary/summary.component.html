@@ -1,0 +1,54 @@
+<div class="chart-container">
+  <!-- <h2>Summary Chart</h2>
+  <canvas id="summary-chart"></canvas> -->
+
+  <h2>Energy Usage Summary</h2>
+  <canvas id="summaryChart"></canvas>
+
+  <p class="chart-description">
+    The bar chart above illustrates the monthly renewable energy usage percentage. It highlights the consistent growth of renewable energy usage across the months, showing a steady increase in the adoption of wind, solar, and hydroelectric power sources. The data is presented as a percentage of total energy consumption, providing an overview of the region's commitment to clean energy.
+</p>
+
+<!-- ADA/WCAG: Live Notification for Real-Time Feedback -->
+<div aria-live="polite" class="live-notification">
+  {{ liveUpdateMessage }}
+</div>
+
+ <!-- ADA/WCAG: Accessible Ask AI Form for Energy Usage Questions -->
+ <div class="ask-ai-container">
+  <h3>Ask AI About Energy Usage</h3>
+  <form (ngSubmit)="onSubmit()" aria-label="Ask AI Form">
+    <label for="question" class="visually-hidden">Ask your question</label>
+    <textarea
+      id="question"
+      name="question"
+      placeholder="Type your question about energy usage here..."
+      [(ngModel)]="question"
+      required
+      aria-required="true"
+      aria-label="Question Text Area"
+      rows="4"
+    ></textarea>
+    <button type="submit" class="styled-button" aria-label="Submit your question">
+      Ask AI
+    </button>
+  </form>
+  <div *ngIf="response" class="ai-response" aria-live="polite">
+    <h4>AI Response:</h4>
+    <p>{{ response }}</p>
+  </div>
+</div>
+
+ <!-- Navigation Buttons -->
+ <div class="button-container">
+
+<!-- For summary page -->
+<button class="styled-button" routerLink="/reports">Go to Reports Page</button>
+<button routerLink="/dashboard" class="styled-button">Back to Dashboard</button>
+
+
+
+
+ </div>
+</div>
+

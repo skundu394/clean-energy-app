@@ -1,0 +1,71 @@
+.top-menu {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.top-menu a.active {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.top-menu button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.top-menu button:hover {
+  background-color: #d32f2f;
+}
+
+/* Highlight the active link */
+.top-menu a[routerLinkActive] {
+  font-weight: bold;
+  color: #0056b3; /* Darker blue to indicate active state */
+}
+
+/* Styling for hover effect */
+.top-menu a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Make sure links look like buttons */
+.top-menu a {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hover effect for better UX */
+.top-menu a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Footer Styles */
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 0.875rem;
+  border-top: 1px solid #ccc;
+  margin-top: 2rem;
+  width: 100%;
+  bottom: 0;
+}
+
+
