@@ -13,10 +13,10 @@ const hardcodedPassword = 'Sri Harini';
 
 // Database Connection
 const dbConfig = {
-  host: 'localhost', // MySQL host
-  user: 'root', // MySQL user
+  host:process.env.DB_HOST || 'localhost', // MySQL host
+  user: process.env.DB_USER || 'root', // MySQL user
   password: process.env.DB_PASSWORD || '', // Password stored securely in .env
-  database: 'clean_energy', // MySQL database name
+  database: process.env.DB_DATABASE || 'clean_energy', // MySQL database name
 };
 const db = mysql.createConnection(dbConfig);
 

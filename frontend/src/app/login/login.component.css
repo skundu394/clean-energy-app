@@ -1,0 +1,76 @@
+/* General container styling with background image */
+.container {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/assets/images/Clean Energy Login Photo.png'); /* Update this path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner content box styling */
+.container .content {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Form heading */
+.container .content h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Label styling */
+.container .content label {
+  font-weight: bold;
+  color: #555;
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+/* Input styling */
+.container .content input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Button styling */
+.container .content button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container .content button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+.container .content p {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+
+

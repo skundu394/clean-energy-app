@@ -1,18 +1,26 @@
+<!-- <img
+src="assets/images/Clean Energy Login Photo.png"
+alt="Offshore Wind Turbines"
+style="width: 100%; max-height: 600px; object-fit: cover; margin-bottom: 20px;"
+/> -->
 <div class="container">
-  <h2>Login</h2>
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div>
-      <label for="username"> Username:</label>
-      <input id="username" formControlName="username" type="text" />
-    </div>
-    <br>
-    <div>
-      <label for="password"> Password: </label>
-      <input id="password" formControlName="password" type="password" />
-    </div>
-    <br>
-    <button type="submit"> Login</button>
-    <p *ngIf="errorMessage">{{ errorMessage }}</p>
-  </form>
+  <div class="content">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div>
+        <label for="username">Username:</label>
+        <input id="username" formControlName="username" type="text" />
+      </div>
+      <br>
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" formControlName="password" type="password" />
+      </div>
+      <br>
+      <button type="submit">Login</button>
+      <p *ngIf="errorMessage">{{ errorMessage }}</p>
+    </form>
+  </div>
 </div>
+
 
