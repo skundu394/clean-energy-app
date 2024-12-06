@@ -105,6 +105,16 @@ app.get('/api/report-chart-data', (req, res) => {
   // ];
   // res.json(reportChartData);
 
+// Serve Angular Frontend
+const distPath = path.join(__dirname, '../frontend/dist/clean-energy-app/browser/browser'); // Adjust to match your folder structure
+app.use(express.static(distPath));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(distPath, 'index.html')); // Serve Angular's index.html for all routes
+});
+
+
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Clean Energy App backend running on http://localhost:${PORT}`);
