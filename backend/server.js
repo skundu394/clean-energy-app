@@ -6,6 +6,8 @@ const PORT = 3000;
 const secretKey = 'clean-energy-secret';
 const mysql = require('mysql');
 require('dotenv').config();
+const path = require('path');
+
 
 // Hardcoded credentials
 const hardcodedUsername = 'Sri Harini';
@@ -54,7 +56,7 @@ app.post('/api/login', (req, res) => {
 
 // Root route (to handle GET request at http://localhost:3000/)
 app.get('/', (req, res) => {
-    res.send('Welcome to the Clean Energy App Backend!');
+  res.sendFile(path.join(distPath, 'index.html')); // Serve Angular's index.html for all routes
 });
 
 // Endpoint for fetching chart data (Summary Page)
@@ -106,12 +108,12 @@ app.get('/api/report-chart-data', (req, res) => {
   // res.json(reportChartData);
 
 // Serve Angular Frontend
-const distPath = path.join(__dirname, '../frontend/dist/clean-energy-app/browser/browser'); // Adjust to match your folder structure
+const distPath = path.join(__dirname, '../frontend/dist/clean-energy-app/browser/browser/'); // Adjust to match your folder structure
 app.use(express.static(distPath));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(distPath, 'index.html')); // Serve Angular's index.html for all routes
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(distPath, 'index.html')); // Serve Angular's index.html for all routes
+// });
 
 
 
