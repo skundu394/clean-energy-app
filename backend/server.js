@@ -15,9 +15,9 @@ const hardcodedPassword = 'Sri Harini';
 
 // Database Connection
 const dbConfig = {
-  host:process.env.DB_HOST || 'localhost', // MySQL host
-  user: process.env.DB_USER || 'root', // MySQL user
-  password: process.env.DB_PASSWORD || '', // Password stored securely in .env
+  host:process.env.DB_HOST || 'database-1.cbu0kysq6uv1.us-east-1.rds.amazonaws.com', // MySQL host
+  user: process.env.DB_USER || 'admin', // MySQL user
+  password: process.env.DB_PASSWORD || 'LalitSri1', // Password stored securely in .env
   database: process.env.DB_DATABASE || 'clean_energy', // MySQL database name
 };
 const db = mysql.createConnection(dbConfig);
@@ -28,7 +28,7 @@ db.connect((err) => {
       console.error('Error connecting to the database:', err);
       process.exit(1);
   } else {
-      console.log('Connected to the MySQL database.');
+      console.log('Connected to the MySQL database Successfully.');
   }
 });
 
