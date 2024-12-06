@@ -49,7 +49,7 @@ export class SummaryComponent implements OnInit {
     }
       // Fetch chart data from the backend
       fetchChartData(): void {
-      this.http.get<SummaryChartData[]>('http://localhost:3000/api/summary-chart-data')
+      this.http.get<SummaryChartData[]>('http://54.196.18.11:3000/api/summary-chart-data')
         .subscribe(
           (data) => {
             this.summaryData = data;

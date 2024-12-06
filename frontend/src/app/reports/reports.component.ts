@@ -39,7 +39,7 @@ export class ReportsComponent implements OnInit {
 
   fetchReportChartData(): void {
     this.http.get<{ country: string; wind: number; solar: number; hydro: number }[]>(
-      'http://localhost:3000/api/report-chart-data'
+      'http://54.196.18.11:3000/api/report-chart-data'
     ).subscribe(
       (data) => {
         this.reportData = data;

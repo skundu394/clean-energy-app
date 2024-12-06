@@ -54,7 +54,7 @@ app.post('/api/login', (req, res) => {
     }
 });
 
-// Root route (to handle GET request at http://localhost:3000/)
+// Root route (to handle GET request at http://54.196.18.11:3000/)
 app.get('/', (req, res) => {
   res.sendFile(path.join(distPath, 'index.html')); // Serve Angular's index.html for all routes
 });
