@@ -21,7 +21,7 @@ interface ReportChartData {
   providedIn: 'root',
 })
 export class ChartDataService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'http://http://54.196.18.11:3000/api';
   private summaryChartUrl = `${this.apiUrl}/summary-chart-data`;
   private reportChartUrl = `${this.apiUrl}/report-chart-data`;
 
